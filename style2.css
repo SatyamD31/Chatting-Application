@@ -1,0 +1,239 @@
+/* header ========================================================================================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+    margin: 0;
+    /* background: #222; */
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+}
+
+.contain {
+    width: 97%;
+    margin: 0 auto;
+}
+
+header {
+    /* background: #55d6aa; */
+    background: #72edc3;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+    padding: 10px 0;
+    padding-top: 5px;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    /* margin: 0; */
+    /* padding: 0; */
+    /* margin-right: -18px; */
+    /* padding-right: 30px; */
+    list-style: none;
+}
+
+nav li {
+    display: inline-block; 
+    margin-left: 70px;
+    padding-top: 25px;
+    position: relative;
+    text-transform: capitalize;
+}
+
+/* sidebar ======================================================================================================== */
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.wrapper .sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    /* background: #4b4276; */
+    background: #55d6aa;
+    /* background: #72edc3; */
+    padding: 30px 0;
+}
+
+.wrapper .sidebar h2 {
+    color: #222;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+.wrapper .sidebar ul li {
+    padding: 15px;
+    border-bottom: 4px solid #bdb8d7;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.05);
+    border-top: 4px solid rgba(255, 255, 255, 0.05);
+    /* border-bottom: 4px solid rgba(255, 255, 255, 0.05); */
+    padding-left: 18px;
+    font-size: medium;
+}
+
+.wrapper .sidebar ul li a {
+    /* color: #bdb8d7; */
+    color: #222;
+    display: block;
+    margin-left: 5px;
+}
+
+.wrapper .sidebar ul li:hover {
+    /* background: #594f8d; */
+    background: #0d6b4b;
+    font-size: larger;
+}
+
+.wrapper .sidebar ul li:hover a {
+    color: #fff;
+}
+
+.wrapper .sidebar ul li a {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    /* color: initial; */
+}
+
+/* for jugaad wala part */
+#group_chat {
+    cursor: pointer;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+    border-radius: 0;
+    float: right;
+    /* right: 10px; */
+    /* position: fixed; */
+    margin: 38px;
+    margin-right: -40px;
+}
+
+.sidebar {
+    padding: 25px 15px;
+    width: 210px;
+    position: fixed;
+    /* top: 0; */
+    /* left: 0; */
+    height: 100%;
+    /* z-index: 999; */
+    /* background: #7386D5; */
+    background: #55d6aa;
+    /* color: #fff; */
+    transition: all 0.3s;
+}
+
+.sidebar.active {
+    margin-left: -250px;
+}
+
+.navbar-btn {
+    /* width: calc(100% - 250px); */
+    width: 90px;
+    padding-right: 20px;
+    margin-right: 2px;
+    margin-top: 1px;
+    /* min-height: 100vh; */
+    transition: all 0.3s;
+    /* position: absolute; */
+    /* top: 0; */
+    /* right: 0; */
+}
+
+.navbar-btn.active {
+    width: 100%;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+@media screen and (min-width: 930px) and (max-width: 1500px) {
+    nav ul {
+        margin-right: -18px;
+    }
+    
+    .row > h4 {
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 929px) {
+    .sidebar {
+        margin-left: -250px;
+    }
+    .sidebar.active {
+        margin-left: 0;
+    }
+    /* #box {
+        width: 100%;
+    }
+    #box.active {
+        width: calc(100% - 250px);
+    } */
+    .sidebarCollapse span {
+        display: none;
+    }
+
+    nav ul {
+        margin-right: -5px;
+    }
+
+    center > h2 {
+        margin-left: 140px;
+        margin-top: 50px;
+        /* padding: left; */
+    }
+
+    .table-responsive {
+        margin-left: -20px;
+    }
+
+    .row > h4 {
+        margin-left: -3px;
+    }
+}
